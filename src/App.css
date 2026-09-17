@@ -690,6 +690,60 @@ table.prize-table td.gold {
   transition: width 0.35s ease;
 }
 
+@media (min-width: 861px) and (max-height: 850px) {
+  #slide-5 {
+    justify-content: flex-start;
+    padding-top: 24px;
+    padding-bottom: 76px;
+  }
+
+  #slide-5 .slide-head {
+    margin-bottom: 20px;
+  }
+
+  #slide-5 .slide-head h2 {
+    font-size: 36px;
+  }
+
+  #slide-5 .slide-head > p:last-child {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  #slide-5 [class~='p-4'] {
+    padding: 10px;
+  }
+
+  #slide-5 [class~='p-5'] {
+    padding: 14px;
+  }
+
+  #slide-5 [class~='mt-7'] {
+    margin-top: 16px;
+  }
+
+  #slide-5 [class~='mt-8'] {
+    margin-top: 18px;
+  }
+
+  #slide-5 [class~='mt-3'] {
+    margin-top: 6px;
+  }
+
+  #slide-5 [class~='mt-4'] {
+    margin-top: 10px;
+  }
+
+  #slide-5 [class~='text-sm'] {
+    font-size: 12px;
+  }
+
+  #slide-5 [class~='text-xs'] {
+    font-size: 10px;
+  }
+}
+
 @media (max-width: 860px) {
   body {
     overflow-y: auto;
