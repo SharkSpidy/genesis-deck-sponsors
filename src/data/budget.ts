@@ -36,7 +36,7 @@ export interface BudgetCategory {
   color: string
 }
 
-export const TOTAL_BUDGET = 5_258_000 // ₹52,58,000
+export const TOTAL_BUDGET = 5_558_000 // ₹55,58,000
 
 /** Detailed prize pool — ₹14,08,000 total, broken out by competition track. */
 export const PRIZE_GROUPS: PrizeGroup[] = [
@@ -127,7 +127,7 @@ export const BUDGET_CATEGORIES: BudgetCategory[] = [
   {
     id: 'contingency',
     label: 'Contingency Buffer',
-    amount: 200_000,
+    amount: 500_000,
     description: 'Unallocated reserve for cost overruns',
     color: '#94a3b8', // slate-400
   },
