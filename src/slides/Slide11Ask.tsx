@@ -65,8 +65,8 @@ export default function Slide11Ask() {
           Event Budget Proposal
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-400">
-          A complete, line-itemed breakdown of the ₹52.58L budget — prize pools, production,
-          broadcast, and operations.
+          A complete, line-itemed breakdown of the {formatLakhs(TOTAL_BUDGET)} budget — prize
+          pools, production, broadcast, and operations.
         </p>
       </div>
 

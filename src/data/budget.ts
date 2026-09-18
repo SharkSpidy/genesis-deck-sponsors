@@ -36,7 +36,7 @@ export interface BudgetCategory {
   color: string
 }
 
-export const TOTAL_BUDGET = 5_558_000 // ₹55,58,000
+export const TOTAL_BUDGET = 5_000_000 // ₹50,00,000
 
 /** Detailed prize pool — ₹14,08,000 total, broken out by competition track. */
 export const PRIZE_GROUPS: PrizeGroup[] = [
@@ -59,7 +59,7 @@ export const PRIZE_GROUPS: PrizeGroup[] = [
 
 export const PRIZE_POOL_TOTAL = PRIZE_GROUPS.reduce((sum, g) => sum + g.amount, 0) // 1,408,000
 
-/** Top-level Event Budget Proposal — 10 categories, ₹52,58,000 total. */
+/** Top-level Event Budget Proposal — 12 categories, ₹50,00,000 total. */
 export const BUDGET_CATEGORIES: BudgetCategory[] = [
   {
     id: 'prize-pool',
@@ -99,7 +99,7 @@ export const BUDGET_CATEGORIES: BudgetCategory[] = [
   {
     id: 'marketing',
     label: 'Marketing & Digital Campaigns',
-    amount: 350_000,
+    amount: 420_000,
     description: 'Paid social, creator partnerships, and on-ground promo',
     color: '#facc15', // yellow-400
   },
@@ -125,17 +125,31 @@ export const BUDGET_CATEGORIES: BudgetCategory[] = [
     color: '#f87171', // red-400
   },
   {
+    id: 'lanyards-tags',
+    label: 'Lanyards & Tags',
+    amount: 500_000,
+    description: 'Event lanyards, badges, and attendee identification tags',
+    color: '#c084fc', // purple-400
+  },
+  {
     id: 'contingency',
     label: 'Contingency Buffer',
-    amount: 500_000,
+    amount: 600_000,
     description: 'Unallocated reserve for cost overruns',
     color: '#94a3b8', // slate-400
+  },
+  {
+    id: 'miscellaneous',
+    label: 'Miscellaneous',
+    amount: 392_000,
+    description: 'Small incidentals to round the proposal to ₹50L',
+    color: '#fbbf24', // amber-400
   },
 ]
 
 export const BUDGET_CATEGORIES_TOTAL = BUDGET_CATEGORIES.reduce((sum, c) => sum + c.amount, 0)
 
-/** Formats a raw rupee amount using the Indian digit-grouping convention, e.g. 5258000 -> "₹52,58,000". */
+/** Formats a raw rupee amount using the Indian digit-grouping convention, e.g. 5000000 -> "₹50,00,000". */
 export function formatINR(amount: number): string {
   return `₹${amount.toLocaleString('en-IN')}`
 }
