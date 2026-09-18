@@ -36,7 +36,7 @@ export interface BudgetCategory {
   color: string
 }
 
-export const TOTAL_BUDGET = 5_000_000 // ₹50,00,000
+export const TOTAL_BUDGET = 6_500_000 // ₹65,00,000
 
 /** Detailed prize pool — ₹14,08,000 total, broken out by competition track. */
 export const PRIZE_GROUPS: PrizeGroup[] = [
@@ -59,7 +59,7 @@ export const PRIZE_GROUPS: PrizeGroup[] = [
 
 export const PRIZE_POOL_TOTAL = PRIZE_GROUPS.reduce((sum, g) => sum + g.amount, 0) // 1,408,000
 
-/** Top-level Event Budget Proposal — 12 categories, ₹50,00,000 total. */
+/** Top-level Event Budget Proposal — 12 categories, ₹65,00,000 total. */
 export const BUDGET_CATEGORIES: BudgetCategory[] = [
   {
     id: 'prize-pool',
@@ -141,15 +141,15 @@ export const BUDGET_CATEGORIES: BudgetCategory[] = [
   {
     id: 'miscellaneous',
     label: 'Miscellaneous',
-    amount: 392_000,
-    description: 'Small incidentals to round the proposal to ₹50L',
+    amount: 272_000,
+    description: 'Small incidentals to round the proposal to ₹65L',
     color: '#fbbf24', // amber-400
   },
 ]
 
 export const BUDGET_CATEGORIES_TOTAL = BUDGET_CATEGORIES.reduce((sum, c) => sum + c.amount, 0)
 
-/** Formats a raw rupee amount using the Indian digit-grouping convention, e.g. 5000000 -> "₹50,00,000". */
+/** Formats a raw rupee amount using the Indian digit-grouping convention, e.g. 6500000 -> "₹65,00,000". */
 export function formatINR(amount: number): string {
   return `₹${amount.toLocaleString('en-IN')}`
 }
